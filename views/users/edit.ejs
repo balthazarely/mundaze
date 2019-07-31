@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<%- include ../partials/_navbar.ejs %>
+<h1>Edit User</h1>
+<a href="/users">Home</a>
+<form action="/users/<%=user._id%>?_method="PUT">
+	Username: <input type="text" name="username" value="<%=user.username%>">
+	Profile Picture: <input type="text" name="profileImg" value="<%=user.profileImg%>">
+	About Me: <input type="text" name="aboutMe" value="<%=user.aboutMe%>">
+	<input type="submit" name="" value="Submit Changes">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

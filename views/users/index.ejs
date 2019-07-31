@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<%- include ../partials/_navbar.ejs %>
+<h1> Users Page</h1>
+<form action="/users/new">
+	<button>Create New User</button>
+</form>
+
+
+
+<%for (let i =0; i < users.length; i++){%>
+	<div>
+	Username: <a href="/users/<%=users[i]._id%>"><%=users[i].username%></a><br/>
+	</div>
+<%}%>
+
+
+
+
+
+</body>
+</html>

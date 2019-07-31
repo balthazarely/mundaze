@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<%- include ../partials/_navbar.ejs %>
+<h1>Profile Page</h1>
+<a href="/users">Home</a><br>
+
+Username: <%=user.username%><br>
+	<img src="<%=user.profileImg%>"><br>
+	About Me: <%=user.aboutMe%>
+		<div>
+	   		<%posts.forEach(function(posts){%>
+    			<a href="/posts/<%=posts._id%>"> <%=posts.title %> </a>
+			<%})%>
+		</div>
+
+
+<form action="/users/<%=user._id%>/edit?_method=Put">
+<button>Edit</button>
+</form>
+<form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+<button>Delete</button>
+</form>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<%- include ../partials/_navbar.ejs %>
+    <h1> New Post Page</h1>
+        <form action="/posts" method="POST">
+            Tile: <input type="text" name="title" /><br/>
+            Post: <input type="text" name="postBody" /><br/>
+            Photo: <input type="text" name="photo" /><br/>
+            Video Link: <input type="text" name="video" /><br/>
+            <input type="hidden" name="user" value="<%=userId%>">
+            <input type="submit" class="btn" value="Post"/>
+        </form>  
+    <a href="/posts">Home</a>
+
+</body>
+</html>

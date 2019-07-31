@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<%- include ../partials/_navbar.ejs %>
+<h1> Create New User</h1>
+<a href="/users">Home</a>
+
+
+<form action="/users" method="POST">
+	Username:
+	<input type="text" name="username"><br>
+	About Me:
+	<input type="text" name="aboutMe"><br>
+	Profile Picure:
+	<input type="text" name="profileImg">
+
+<input type="submit" name="" value="Submit">
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>
