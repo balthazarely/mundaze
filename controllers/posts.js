@@ -48,6 +48,7 @@ router.get('/:id', async (req, res) => {
         });
     }catch (error){
         res.send(error);
+        console.log(error);
     }
 });
 
@@ -91,9 +92,6 @@ router.get('/:id/edit', async (req, res) => {
 router.post('/', async (req, res) => {
     try{
         const createdPost = await Posts.create(req.body);
-        // if(req.body.photo == ""){
-        //     console.log("there is not photo here!")
-        // }
         console.log(req.body)
         res.redirect('/posts');
     }catch(error) {
