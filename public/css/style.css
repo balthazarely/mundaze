@@ -196,7 +196,8 @@ h6 {
     font-weight: 100;
 }
 
-.loginInput {
+.loginInput,
+.newPostInput {
     border-radius: 5px;
 }
 
@@ -258,6 +259,7 @@ input[type=text] {
     font-weight: 200;
 }
 
+
 /*User Profile Page*/
 .user-h2 {
     color: white;
@@ -303,6 +305,7 @@ input[type=text] {
     margin: 10px;
 }
 
+<<<<<<< HEAD
 .aboutMe-content {
     color: white;
     font-size: 20px;
@@ -325,24 +328,18 @@ input[type=text] {
 
 
 
+/* NEW POST PAGE */
+.newPostTitle {
+    font-weight: 100;
+    font-size: 7vw;
+    margin-bottom: 3%;
+    margin-top: 10%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.newPostForm {
+    font-weight: 100;
+    line-height: 1.5;
+    font-size: 1.5vw;
+}
 
 
