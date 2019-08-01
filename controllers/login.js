@@ -8,6 +8,12 @@ const bcrypt = require("bcryptjs");
 
 // LOGIN for registered users
 router.post("/", async (req,res) => {
+	if(req.body.username == "" || req.body.password =="") {
+        req.session.message = {};
+        req.session.message.type = "login";
+        req.session.message.text = "The username or password is incorrect";
+        res.redirect("/");
+    } 
 	try {
 		const foundUser = await User.findOne({username: req.body.username});
 		console.log(foundUser, "<-- foundUser");
@@ -43,6 +49,12 @@ router.post("/register", async (req,res) => {
 	const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 	console.log(hashedPassword);
 	req.body.password = hashedPassword;
+	if(req.body.username == "" || req.body.password =="") {
+        req.session.message = {};
+        req.session.message.type = "login";
+        req.session.message.text = "The username or password is incorrect";
+        res.redirect("/");
+    } 
 	try {
 		const createdUser = await User.create(req.body);
 		console.log(createdUser, "<-- CREATED USER");

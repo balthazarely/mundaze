@@ -20,14 +20,16 @@
 <div class="user-body">
 <div class="wrapper">
 
-	<h2 class="user-h2"><%=user.username%></h2>
+	
 
 	<div class="image-frame">
 		<img src="<%=user.profileImg%>" class="rounded" alt="Profile Picture">
+
 	 </div>
+	 <h2 class="user-h2"><%=user.username%></h2>
 </div><br>
 	
-	<p class="aboutMe-content"><%=user.aboutMe%></p>
+	<p class="aboutMe-content" id="aboutMeText">about me: <%=user.aboutMe%></p>
 		<div>
 	
 

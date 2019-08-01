@@ -384,6 +384,10 @@ input[type=text] {
     font-size: 20px;
     font-weight: bold; 
 }
+
+#aboutMeText {
+    font-weight: 200;
+}
 .user-posts {
     color: white;
     text-decoration: underline;
@@ -412,11 +416,17 @@ input[type=text] {
     font-weight: 100;
     line-height: 1.5;
     font-size: 1.5vw;
+    color: white;
+}
+
+.newPost {
+    width: 20vw;
 }
 
 
 textarea {
-    height: 25vh;
+    height: 15vh;
+    width: 25vw;
 }
 
 textarea[type=text] {
@@ -426,6 +436,19 @@ textarea[type=text] {
 
 #goHomeBtn {
     bottom: -8%;
+}
+
+/* EDIT YOU PAGE */
+.editYouLabel {
+    margin-bottom: 0;
+}
+
+.submitEdit {
+    margin-top: 3%;
+}
+
+#mun {
+    font-weight: 100;
 }
 
 
