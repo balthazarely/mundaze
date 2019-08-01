@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Posts = require('../models/posts');
+const User = require('../models/user');
 const requireLogin = require("../middleware/requireLogin");
 
 
@@ -36,11 +37,14 @@ router.get('/new', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try{
         const foundShowPost = await Posts.findById(req.params.id); 
-
+        const user = await User.findById(req.params.id);
         const foundPostBody = await Posts.findById(req.params.id);
+        const currentUser = req.session.userId;
         console.log(foundShowPost);
         res.render('posts/show.ejs', {
             posts: foundShowPost,
+            user: user,
+            currentUser: currentUser
         });
     }catch (error){
         res.send(error);
@@ -49,26 +53,28 @@ router.get('/:id', async (req, res) => {
 
 //DELETE
 router.delete('/:id', async (req, res) => {
-    try{
+    const foundPost = await Posts.findById(req.params.id);
+    const foundUser = await User.findById(foundPost.user);
+    if(foundUser._id == req.session.userId){
         await Posts.findByIdAndDelete(req.params.id);
         res.redirect('/posts');
-    } catch(error) {
-        res.send(error);
+    }else{
+        res.send('Sorry, this is not your post to delete.');
     }
-});
+    });
 
 
 
 //EDIT
 router.get('/:id/edit', async (req, res) => {
-    try{
-     const foundPost = await Posts.findById(req.params.id);
-     res.render('posts/edit.ejs', {
-         posts: foundPost
-     })
- }catch(error){
-         res.send(error);
-     }
+    const foundPost = await Posts.findById(req.params.id);
+    const foundUser = await User.findById(foundPost.user); 
+    if(foundUser._id == req.session.userId){
+            res.render('posts/edit.ejs', {
+            posts: foundPost
+     })} else{
+                res.send('Sorry, this is not your post to edit.');
+            }
  });
 
  //UPDATE 
