@@ -20,8 +20,8 @@
     <div class="grid-container-show">
         <div class="column">
             <h4 class="show-title"> <%=posts.title%></h4>
+            <p class="show-user">Posted by <%=posts.user.username%></p>
             <p class="show-text"><%=posts.postBody%></p>
-            <%# <button type="button" class="btn btn-light">Back to the Gallery</button> %>
             <a href="/posts" class="btn btn-light startRant" role="button">Back to Gallery</a>
 
         </div>

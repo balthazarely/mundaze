@@ -35,8 +35,7 @@ router.get('/new', async (req, res) => {
 //SHOW
 router.get('/:id', async (req, res) => {
     try{
-        const foundShowPost = await Posts.findById(req.params.id); 
-
+        const foundShowPost = await Posts.findById(req.params.id).populate("user"); 
         const foundPostBody = await Posts.findById(req.params.id);
         console.log(foundShowPost);
         res.render('posts/show.ejs', {

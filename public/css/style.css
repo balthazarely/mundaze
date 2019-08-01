@@ -155,6 +155,13 @@ h6 {
     min-width: 450px;
 }
 
+.show-user {
+    color: white;
+    min-width: 450px;
+    opacity: 0.5;
+    font-style: italic;
+}
+
 @media (min-width: 850px) {
     .grid-container-show {
         display: grid;
