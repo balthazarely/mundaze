@@ -13,17 +13,24 @@
 <body>
 <%- include ../partials/_navbar.ejs %>
 
-<form action="/users/new">
-	<button>Create New User</button>
-</form>
+<div class="about-us">
+    <div>
+        <h4> Users</h4>
+        </div>
+</div>
 
 
+<div class="main-container">
+    <div class=".grid-container-userindex ">
+        <%for(let i = 0; i < users.length; i++) {%>
+            <article>
+                <a class="username-index" href="/users/<%=users[i]._id%>"><%=users[i].username%></a>
+            </article>
+        <%}%>
+    </div>
+</div>
 
-<%for (let i =0; i < users.length; i++){%>
-	<div>
-	Username: <a href="/users/<%=users[i]._id%>"><%=users[i].username%></a><br/>
-	</div>
-<%}%>
+
 
 
 
