@@ -5,19 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
 <%- include ../partials/_navbar.ejs %>
-    <h1> New Post Page</h1>
-        <form action="/posts" method="POST">
-            Tile: <input type="text" name="title" /><br/>
-            Post: <input type="text" name="postBody" /><br/>
-            Photo: <input type="text" name="photo" /><br/>
-            Video Link: <input type="text" name="video" /><br/>
-            <input type="hidden" name="user" value="<%=userId%>">
-            <input type="submit" class="btn" value="Post"/>
-        </form>  
-    <a href="/posts">Home</a>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+            
+            </div>
+            <div class="col-8">
+                <h1 class="newPostTitle">Fresh<strong>Rant</strong></h1>
+
+                <form class="newPostForm" action="/posts" method="POST">
+                <p>Title: <input class="newPostInput" type="text" name="title" /></p>
+                <p>Post: <input class="newPostInput" type="text" name="postBody" /></p>
+                <p>Photo: <input class="newPostInput" type="text" name="photo" /></p>
+                <p>Video Link: <input class="newPostInput" type="text" name="video" /></p>
+                <input type="hidden" name="user" value="<%=userId%>">
+                <input type="submit" class="btn" value="Post"/>
+                </form>  
+
+                <a href="/posts">Home</a>
+            </div>
+            <div class="col-2">
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 </body>
 </html>
+
+
+
+        

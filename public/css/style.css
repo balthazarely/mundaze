@@ -196,7 +196,8 @@ h6 {
     font-weight: 100;
 }
 
-.loginInput {
+.loginInput,
+.newPostInput {
     border-radius: 5px;
 }
 
@@ -256,4 +257,19 @@ h6 {
 
 input[type=text] {
     font-weight: 200;
+}
+
+
+/* NEW POST PAGE */
+.newPostTitle {
+    font-weight: 100;
+    font-size: 7vw;
+    margin-bottom: 3%;
+    margin-top: 10%;
+}
+
+.newPostForm {
+    font-weight: 100;
+    line-height: 1.5;
+    font-size: 1.5vw;
 }
