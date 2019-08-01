@@ -35,6 +35,11 @@ strong {
     margin: 80px 60px;
 }
 
+.editDelete {
+    display: inline-block;
+    margin-left: 10%;
+}
+
 h4 {
     font-size: 30px;
     background: rgb(176,54,191);
@@ -213,7 +218,7 @@ h6 {
 }
 
 .row {
-    height: 100vh;
+    height: 88vh;
 }
 
 .col-8 {
@@ -237,7 +242,8 @@ h6 {
 }
 
 .loginInput,
-.newPostInput {
+.newPostInput,
+.editPostInput {
     border-radius: 5px;
 }
 
@@ -291,12 +297,29 @@ h6 {
   right: 0;
 }
 
+/* EDIT and DELETE buttons  */
+.editDeleteBtn{
+    display: inline-block;
+    position: relative;
+    padding: 0.25em .5em;
+    text-decoration: none;
+    color: white;
+    transition: .4s;
+    font-size: 15px;
+}
+
+.editDeleteForm {
+    margin: 0 10px;
+}
+
+
 .message {
     font-weight: 100;
 }
 
 input[type=text] {
     font-weight: 200;
+    margin: 10px;
 }
 
 
@@ -364,17 +387,37 @@ input[type=text] {
 
 
 /* NEW POST PAGE */
-.newPostTitle {
+.newPostTitle,
+.editTitle {
     font-weight: 100;
     font-size: 7vw;
     margin-bottom: 3%;
-    margin-top: 10%;
+    margin-top: 3%;
 }
 
-.newPostForm {
+.newPostForm,
+.editForm {
     font-weight: 100;
     line-height: 1.5;
     font-size: 1.5vw;
 }
+
+
+textarea {
+    height: 25vh;
+}
+
+textarea[type=text] {
+    font-weight: 200;
+    margin: 10px;
+}
+
+#goHomeBtn {
+    bottom: -8%;
+}
+
+
+
+
 
 
