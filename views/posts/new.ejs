@@ -20,12 +20,12 @@
                 <h1 class="newPostTitle">fresh<strong>rant</strong></h1>
 
                 <form class="newPostForm" action="/posts" method="POST">
-                <input placeholder="title" class="newPostInput" type="text" name="title" /><br/>
-                <textarea placeholder="post" class="newPostInput" type="text" name="postBody"></textarea><br/>
-                <input placeholder="photo link" class="newPostInput" type="text" name="photo" /><br/>
-                <input Placeholder="video link" class="newPostInput" type="text" name="video" /><br/>
+                <input placeholder="title" class="newPostInput newPost" type="text" name="title" /><br/>
+                <input placeholder="photo url" class="newPostInput newPost" type="text" name="photo" /><br/>
+                <input Placeholder="video url" class="newPostInput newPost" type="text" name="video" /><br/>
+                <textarea placeholder="rant goes here" class="newPostInput" type="text" name="postBody"></textarea><br/>
                 <input type="hidden" name="user" value="<%=userId%>">
-                <input type="submit" class="btn btn-light startRant" value="Post"/>
+                <input type="submit" class="btn btn-light startRant submitEdit" value="Post"/>
                 </form>  
 
                 <a href="/posts" class="loginButton" id="goHomeBtn" role="button">home</a>
