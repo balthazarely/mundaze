@@ -412,11 +412,17 @@ input[type=text] {
     font-weight: 100;
     line-height: 1.5;
     font-size: 1.5vw;
+    color: white;
+}
+
+.newPost {
+    width: 20vw;
 }
 
 
 textarea {
-    height: 25vh;
+    height: 15vh;
+    width: 25vw;
 }
 
 textarea[type=text] {
@@ -428,6 +434,14 @@ textarea[type=text] {
     bottom: -8%;
 }
 
+/* EDIT YOU PAGE */
+.editYouLabel {
+    margin-bottom: 0;
+}
+
+.submitEdit {
+    margin-top: 3%;
+}
 
 
 
