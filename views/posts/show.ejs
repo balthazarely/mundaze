@@ -20,12 +20,9 @@
     <div class="grid-container-show">
         <div class="column">
             <h4 class="show-title"> <%=posts.title%></h4>
-            <p class="show-text">Change padding-top and padding-bottom and define line-height 
-            for uncollapsed navbar links. Values for padding 
-            again need to be calculated as you can see in the code below. Change padding-top and padding-bottom and define line-height 
-            for uncollapsed navbar links. 
-            again need to be calculated as you can see in t</p>
-            <button type="button" class="btn btn-light">Back to the Gallery</button>
+            <p class="show-text"><%=posts.postBody%></p>
+            <%# <button type="button" class="btn btn-light">Back to the Gallery</button> %>
+            <a href="/posts" class="btn btn-light startRant" role="button">Back to Gallery</a>
 
         </div>
         <div class="column"> 
