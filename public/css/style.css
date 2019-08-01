@@ -156,7 +156,7 @@ h6 {
     max-height: 600px ;
     object-fit: contain;
     align-content: space-between;
-      min-width: 450px;
+      min-width: 300px;
 }
 
 .show-title {
