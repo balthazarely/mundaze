@@ -29,13 +29,32 @@
 	
 	<p class="aboutMe-content"><%=user.aboutMe%></p>
 		<div>
-			<h3 class="user-posts">Posts</h3>
-			  <ul class="list-group list-group-flush">
-	   		<%posts.forEach(function(posts){%>
-  					<li class="list-group-item"><a class="a-user" href="/posts/<%=posts._id%>"> <%=posts.title %> </a></li>
-			<%})%>
-				</ul>
-		</div>
+	
+
+
+<div>
+    <h4 class="userposts-header"> User Posts</h4>
+</div>
+
+
+
+<div class="main-container">
+    <div class="grid-container">
+        <%for(let i = 0; i < posts.length; i++) {%>
+            <article class="location-listing">
+            <div class="hoverclass" >
+                <a class="location-title" href="/posts/<%=posts[i]._id%>"><%=posts[i].title%></a>
+                <div class="location-image">
+                    <a href="#"><img class="index-image width="300" height="169" src="<%=posts[i].photo%>" alt="photohere"></a>
+                </div>
+                </div>
+            </article>
+            
+        <%}%>
+    </div>
+</div>
+
+
 
 <div class="loginForm user">
 	<%if (user._id == currentUser){%>
