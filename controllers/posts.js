@@ -36,7 +36,8 @@ router.get('/new', async (req, res) => {
 //SHOW
 router.get('/:id', async (req, res) => {
     try{
-        const foundShowPost = await Posts.findById(req.params.id).populate("user"); 
+        const foundShowPost = await Posts.findById(req.params.id).populate("user");
+        const user = await User.findById(req.params.id);  
         const foundPostBody = await Posts.findById(req.params.id);
         const currentUser = req.session.userId;
         console.log(foundShowPost);
