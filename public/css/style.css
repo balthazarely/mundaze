@@ -316,7 +316,10 @@ input[type=text] {
 .wrapper {
     background: linear-gradient(90deg, rgba(176,54,191,1) 0%, rgba(34,142,154,1) 100%); 
 }
-
+.edit-user {
+    color: black;
+    margin: 10px;
+}
 
 
 
