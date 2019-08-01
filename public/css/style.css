@@ -53,6 +53,18 @@ h6 {
     color: rgba(255,255,255, 0.8);
 }
 
+.userposts-header {
+    grid-template-columns: repeat(1, 1fr);
+    display: inline-grid;
+    grid-gap: 1em;
+    margin: 0px 0px 40px 0px;
+    font-size: 30px;
+    background: rgb(176,54,191);
+    background: linear-gradient(90deg, rgba(176,54,191,1) 0%, rgba(34,142,154,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
 .btn {
     background: rgb(176,54,191);
     border:none;
