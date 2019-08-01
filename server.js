@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require("express-session");
 const app = express();
-
+require('dotenv').config();
 
 require('./db/db');
 
@@ -52,6 +52,6 @@ app.get("/", (req,res) => {
 
 
 
-app.listen(3000, () => {
-    console.log("the server is listening for requests...")
+app.listen(process.env PORT, () => {
+    console.log("the server is listening for requests..." + process.env PORT)
 });

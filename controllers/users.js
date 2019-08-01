@@ -64,7 +64,7 @@ router.get('/:id/edit', (req, res)=>{
 })
 router.put('/:id', async (req, res)=>{
 	const user = await User.findByIdAndUpdate(req.params.id, req.body);
-	res.redirect('/users/' + req.params.id);
+	res.redirect('/users/' + req.body);
 	})
 
 //delete route
