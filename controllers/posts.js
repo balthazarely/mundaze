@@ -9,7 +9,6 @@ const requireLogin = require("../middleware/requireLogin");
 router.get('/', async (req, res) => {
     try {
         const findPosts = await Posts.find();
-        console.log("this is the index for the post");
         res.render('posts/index.ejs', {
             posts: findPosts,
         });
@@ -91,6 +90,11 @@ router.get('/:id/edit', async (req, res) => {
 //CREATE
 router.post('/', async (req, res) => {
     try{
+        
+        if (req.body.photo == '') {
+             req.body.photo = undefined
+        }
+        
         const createdPost = await Posts.create(req.body);
         console.log(req.body)
         res.redirect('/posts');
@@ -98,11 +102,5 @@ router.post('/', async (req, res) => {
         res.send(error)
     }
 });
-
-
-
-
-
-
 
 module.exports = router;
