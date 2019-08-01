@@ -14,32 +14,17 @@
 <body>
 <%- include ../partials/_navbar.ejs %>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-2">
-      
-    </div>
-    <div class="col-8">
-        <h1 class="editTitle">edit<strong>you</strong></h1>
-        
-        <div class="edit-user">
-            <form class="editForm" action="/users/<%=user._id%>?_method="PUT">
-                <p class="editYouLabel">username</p>
-                <input class="editPostInput" type="text" name="username" value="<%=user.username%>"><br>
-                <p class="editYouLabel">profile image url</p>
-                <input class="editPostInput" type="text" name="profileImg" value="<%=user.profileImg%>"><br>
-                <p class="editYouLabel">about me</p>
-                <textarea class="editPostInput" type="text" name="aboutMe"><%=user.aboutMe%></textarea><br>
+<div class="edit-user">
+<form action="/users/<%=user._id%>?_method=PUT" method="POST">
+	
+    <input type="text" name="username" placeholder="Username" value="<%=user.username%>"><br>
 
-                <input class="btn btn-light startRant submitEdit" type="submit" name="" value="Submit Changes">
-            </form>
-        </div>
-    </div>
-    <div class="col-2">
-      
-    </div>
-  </div>
-  
+	<input type="text" name="profileImg" placeholder="Profile Image Url" value="<%=user.profileImg%>"><br>
+
+	<input type="text" name="aboutMe" placeholder="About Me" value="<%=user.aboutMe%>"><br>
+
+	<input type="submit" name="" value="Submit Changes">
+</form>
 </div>
 
 
