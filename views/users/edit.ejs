@@ -16,9 +16,13 @@
 
 <div class="edit-user">
 <form action="/users/<%=user._id%>?_method="PUT">
-	<input type="text" name="username" placeholder="Username" value="<%=user.username%>"><br>
+	
+    <input type="text" name="username" placeholder="Username" value="<%=user.username%>"><br>
+
 	<input type="text" name="profileImg" placeholder="Profile Image Url" value="<%=user.profileImg%>"><br>
+
 	<input type="text" name="aboutMe" placeholder="About Me" value="<%=user.aboutMe%>"><br>
+
 	<input type="submit" name="" value="Submit Changes">
 </form>
 </div>

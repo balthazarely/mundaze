@@ -20,33 +20,32 @@
 <div class="user-body">
 <div class="wrapper">
 
-<h2 class="user-h2"><%=user.username%></h2>
+	<h2 class="user-h2"><%=user.username%></h2>
 
 	<div class="image-frame">
-  	<img src="<%=user.profileImg%>" class="rounded" alt="Profile Picture">
-	</div><br>
-
+		<img src="<%=user.profileImg%>" class="rounded" alt="Profile Picture">
+	 </div>
+</div><br>
+	
 	<p class="aboutMe-content"><%=user.aboutMe%></p>
-</div>
-
 		<div>
 			<h3 class="user-posts">Posts</h3>
 			  <ul class="list-group list-group-flush">
 	   		<%posts.forEach(function(posts){%>
-
   					<li class="list-group-item"><a class="a-user" href="/posts/<%=posts._id%>"> <%=posts.title %> </a></li>
-
 			<%})%>
 				</ul>
 		</div>
 
 <div class="loginForm user">
+	<%if (user._id == currentUser){%>
 	<form action="/users/<%=user._id%>/edit?_method=Put">
 		<button class="loginButton user">Edit</button>
 	</form>
 	<form action="/users/<%=user._id%>?_method=DELETE" method="POST">
 		<button class="loginButton user two">Delete</button>
 	</form>
+<% }%>
 </div>
 
 

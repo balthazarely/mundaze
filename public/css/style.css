@@ -267,8 +267,6 @@ input[type=text] {
 }
 .aboutMe {
     color: white;
-    margin: 5px;
-    top: 20em;
 }
 .list-group.list-group-flush .list-group-item {
     background-color: rgb(27,35,41);
@@ -305,7 +303,7 @@ input[type=text] {
     margin: 10px;
 }
 
-<<<<<<< HEAD
+
 .aboutMe-content {
     color: white;
     font-size: 20px;
@@ -317,15 +315,12 @@ input[type=text] {
 
 }
 .wrapper {
-    background: linear-gradient(90deg, rgba(176,54,191,1) 0%, rgba(34,142,154,1) 100%); 
+    background: linear-gradient(90deg, rgba(176,54,191,.8) 0%, rgba(34,142,154,.7) 100%); 
 }
 .edit-user {
     color: black;
     margin: 10px;
 }
-
-
-
 
 
 /* NEW POST PAGE */
