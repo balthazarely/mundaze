@@ -20,10 +20,10 @@
                 <h1 class="newPostTitle">Fresh<strong>Rant</strong></h1>
 
                 <form class="newPostForm" action="/posts" method="POST">
-                <p>Title: <input class="newPostInput" type="text" name="title" /></p>
-                <p>Post: <input class="newPostInput" type="text" name="postBody" /></p>
-                <p>Photo: <input class="newPostInput" type="text" name="photo" /></p>
-                <p>Video Link: <input class="newPostInput" type="text" name="video" /></p>
+                <p>Title: <input placeholder="definitely required" class="newPostInput" type="text" name="title" /></p>
+                <p>Post: <input placeholder="yes, this is for sure required" class="newPostInput" type="text" name="postBody" /></p>
+                <p>Photo: <input placeholder="optional, but it helps" class="newPostInput" type="text" name="photo" /></p>
+                <p>Video Link: <input Placeholder="don't have to, but you should" class="newPostInput" type="text" name="video" /></p>
                 <input type="hidden" name="user" value="<%=userId%>">
                 <input type="submit" class="btn" value="Post"/>
                 </form>  
