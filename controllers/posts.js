@@ -9,7 +9,6 @@ const requireLogin = require("../middleware/requireLogin");
 router.get('/', async (req, res) => {
     try {
         const findPosts = await Posts.find();
-        console.log("this is the index for the post");
         res.render('posts/index.ejs', {
             posts: findPosts,
         });
@@ -36,7 +35,8 @@ router.get('/new', async (req, res) => {
 //SHOW
 router.get('/:id', async (req, res) => {
     try{
-        const foundShowPost = await Posts.findById(req.params.id).populate("user"); 
+        const foundShowPost = await Posts.findById(req.params.id).populate("user");
+        const user = await User.findById(req.params.id);  
         const foundPostBody = await Posts.findById(req.params.id);
         const currentUser = req.session.userId;
         console.log(foundShowPost);
@@ -47,6 +47,7 @@ router.get('/:id', async (req, res) => {
         });
     }catch (error){
         res.send(error);
+        console.log(error);
     }
 });
 
@@ -89,21 +90,17 @@ router.get('/:id/edit', async (req, res) => {
 //CREATE
 router.post('/', async (req, res) => {
     try{
+        
+        if (req.body.photo == '') {
+             req.body.photo = undefined
+        }
+        
         const createdPost = await Posts.create(req.body);
-        // if(req.body.photo == ""){
-        //     console.log("there is not photo here!")
-        // }
         console.log(req.body)
         res.redirect('/posts');
     }catch(error) {
         res.send(error)
     }
 });
-
-
-
-
-
-
 
 module.exports = router;
