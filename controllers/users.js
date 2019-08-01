@@ -52,9 +52,9 @@ router.get('/:id', async (req, res)=>{
 });
 
 //edit and update routes
-router.get('/:id/edit', (req, res)=>{
+router.get('/:id/edit', async(req, res)=>{
 	try{
-	const user = User.findById(req.params.id);
+	const user = await User.findById(req.params.id);
 	res.render('users/edit.ejs', {
 		user: user
 	})
@@ -63,15 +63,16 @@ router.get('/:id/edit', (req, res)=>{
 	}
 })
 router.put('/:id', async (req, res)=>{
+	console.log(req.body, '<-- req.body in update')
 	const user = await User.findByIdAndUpdate(req.params.id, req.body);
-	res.redirect('/users/' + req.body);
+	res.redirect('/users/' + req.params.id);
 	})
 
 //delete route
 router.delete('/:id', async (req, res)=>{
 	try{
 	const user = await User.findByIdAndDelete(req.params.id);
-	res.redirect('/users')
+	res.redirect('/')
 	}catch(err){
 		res.send(err)
 	}

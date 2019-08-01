@@ -15,7 +15,7 @@
 <%- include ../partials/_navbar.ejs %>
 
 <div class="edit-user">
-<form action="/users/<%=user._id%>?_method="PUT">
+<form action="/users/<%=user._id%>?_method=PUT" method="POST">
 	
     <input type="text" name="username" placeholder="Username" value="<%=user.username%>"><br>
 
