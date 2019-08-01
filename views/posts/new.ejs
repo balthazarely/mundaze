@@ -17,18 +17,18 @@
             
             </div>
             <div class="col-8">
-                <h1 class="newPostTitle">Fresh<strong>Rant</strong></h1>
+                <h1 class="newPostTitle">fresh<strong>rant</strong></h1>
 
                 <form class="newPostForm" action="/posts" method="POST">
-                <p>Title: <input placeholder="definitely required" class="newPostInput" type="text" name="title" /></p>
-                <p>Post: <input placeholder="yes, this is for sure required" class="newPostInput" type="text" name="postBody" /></p>
-                <p>Photo: <input placeholder="optional, but it helps" class="newPostInput" type="text" name="photo" /></p>
-                <p>Video Link: <input Placeholder="don't have to, but you should" class="newPostInput" type="text" name="video" /></p>
+                <input placeholder="title" class="newPostInput" type="text" name="title" /><br/>
+                <textarea placeholder="post" class="newPostInput" type="text" name="postBody"></textarea><br/>
+                <input placeholder="photo link" class="newPostInput" type="text" name="photo" /><br/>
+                <input Placeholder="video link" class="newPostInput" type="text" name="video" /><br/>
                 <input type="hidden" name="user" value="<%=userId%>">
-                <input type="submit" class="btn" value="Post"/>
+                <input type="submit" class="btn btn-light startRant" value="Post"/>
                 </form>  
 
-                <a href="/posts">Home</a>
+                <a href="/posts" class="loginButton" id="goHomeBtn" role="button">home</a>
             </div>
             <div class="col-2">
             
