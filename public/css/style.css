@@ -258,19 +258,63 @@ input[type=text] {
     font-weight: 200;
 }
 
-
-
-
-
-
-
-
-
-
 /*User Profile Page*/
 .user-h2 {
     color: white;
     text-align: center;
+}
+.aboutMe {
+    color: white;
+    margin: 5px;
+    top: 20em;
+}
+.list-group.list-group-flush .list-group-item {
+    background-color: rgb(27,35,41);
+    border: none;
+}
+.a-user {
+    color: white;
+}
+
+.user-body {
+    text-align: center;
+    color:white;
+}
+.user-header {
+    text-align: center;
+}
+.image-frame {
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.rounded {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+.loginButton.user{
+    font-size: 15px;
+    top: 18em;
+    margin: 10px;
+}
+
+.aboutMe-content {
+    color: white;
+    font-size: 20px;
+    font-weight: bold; 
+}
+.user-posts {
+    color: white;
+    text-decoration: underline;
+
+}
+.wrapper {
+    background: linear-gradient(90deg, rgba(176,54,191,1) 0%, rgba(34,142,154,1) 100%); 
 }
 
 
@@ -299,11 +343,3 @@ input[type=text] {
 
 
 
-
-
-
-
-
-
-=======
->>>>>>> 25520bd2d0f0d9ec4fbf56de91a9fa9c80c698fe
