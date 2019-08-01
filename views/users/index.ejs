@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <title>Document</title>
 </head>
+
 <body>
 
 <%- include ../partials/_navbar.ejs %>
@@ -24,15 +25,14 @@
 </div>
 
 
+
 <div class="main-container">
-    <div class="grid-container">
+    <div class="grid-container-user-index ">
         <%for(let i = 0; i < users.length; i++) {%>
             <article class="location-listing">
             <div class="hoverclass" >
-                <a class="location-title" href="/users/<%=users[i]._id%>"><%=users[i].username%></a>
-                <div class="location-image">
-                    <a href="#"><img class="index-image" width="300" height="300" src="<%=users[i].profileImg%>" alt="photohere"></a>
-                </div>
+                <a class="user-title-card" href="/users/<%=users[i]._id%>"><%=users[i].username%></a>
+                
                 </div>
             </article>
             
