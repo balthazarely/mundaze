@@ -32,13 +32,16 @@
     </div>
 </div>
 
+
     <div class="editDelete">
+    <% if(posts.user._id == currentUser){%>
          <form class="loginButton editDeleteBtn editDeleteForm" action="/posts/<%=posts._id%>?_method=DELETE" method="POST">
             <input type="submit" class="loginButton editDeleteBtn" value="delete post"/>
         </form>
         <form class="loginButton editDeleteBtn editDeleteForm" action="/posts/<%=posts._id%>/edit">
             <input type="submit" class="loginButton editDeleteBtn" value="edit"/>
         </form>    
+        <%}%>  
     </div>
 
    
