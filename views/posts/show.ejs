@@ -33,12 +33,14 @@
 </div>
 
 <div class="about-us">
+<% if(posts.user._id == currentUser){%>
          <form action="/posts/<%=posts._id%>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Post"/>
         </form>
         <form action="/posts/<%=posts._id%>/edit">
             <input type="submit" value="Edit"/>
-        </form>    
+        </form> 
+        <%}%>   
     </div>
 
    
