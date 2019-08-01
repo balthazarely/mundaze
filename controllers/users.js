@@ -40,13 +40,11 @@ router.get('/:id', async (req, res)=>{
 	try{
 		const user = await User.findById(req.params.id);
 		const userPosts = await Posts.find({user: req.params.id});
-		const currentUser = req.session.userId;
 		console.log(user, "<-- user");
 		console.log(userPosts, "<-- userPost");
 		res.render('users/show.ejs', {
 			posts: userPosts,
-			user: user,
-			currentUser: currentUser
+			user: user
 		})
 	}catch(err){
 		res.send(err)
@@ -54,17 +52,16 @@ router.get('/:id', async (req, res)=>{
 });
 
 //edit and update routes
-router.get('/:id/edit', async(req, res)=>{
-	const foundPost = Posts.findById(req.params.id);
-	const user = await User.findById(req.params.id);
-	console.log(user, '<-- user');
-	if(user._id == req.session.userId){
-		res.render('users/edit.ejs', {
+router.get('/:id/edit', (req, res)=>{
+	try{
+	const user = User.findById(req.params.id);
+	res.render('users/edit.ejs', {
 		user: user
-	})} else{
-			res.send("You don't have authority to edit this page.")
-		}})
-	
+	})
+	}catch(err){
+		res.send(err)
+	}
+})
 router.put('/:id', async (req, res)=>{
 	const user = await User.findByIdAndUpdate(req.params.id, req.body);
 	res.redirect('/users/' + req.params.id);
@@ -72,14 +69,13 @@ router.put('/:id', async (req, res)=>{
 
 //delete route
 router.delete('/:id', async (req, res)=>{
+	try{
 	const user = await User.findByIdAndDelete(req.params.id);
-	const foundPost = Posts.findById(req.params.id);
-	console.log(user, '<-- user');
-	if(user._id == req.session.userId){
-		res.redirect('/posts');
-	} else{
-			res.send("You don't have authority to delete this page.")
-		}})
+	res.redirect('/users')
+	}catch(err){
+		res.send(err)
+	}
+})
 
 
 
