@@ -135,6 +135,28 @@ h6 {
 }
 
 
+/* user index page */
+.grid-container-userindex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 1em;
+}
+
+.username-index {
+    color: white;
+    margin: 0px 50px;
+}
+  
+.username-index:hover  {
+     border:none;
+    color:white;
+    background: rgba(34,142,154,1);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 800px;
+}
+
 
 /* this is the show page styles */
 .show-main-container {

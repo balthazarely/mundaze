@@ -14,10 +14,11 @@ const postSchema = new mongoose.Schema({
         default: Date.now
     },
     video: String, 
-    photo: {
-        type: String, 
-        default:'https://i.imgur.com/3FWYaDH.png'
-    },  
+    photo: String,
+    // photo: {
+    //     type: String, 
+    //     default:'https://i.imgur.com/3FWYaDH.png'
+    // },  
     user: {
         type: Schema.Types.ObjectId,
         ref: "User"

@@ -16,26 +16,17 @@
 
 <div class="about-us">
     <div>
-        <h4> Our Users</h4>
-      
-            <a href="/posts/new" class="btn btn-light startRant" role="button">Start Your Rant!</a>
-
-            <%# <button type="button" class="btn btn-light">Start Your Rant!</button> %>
+        <h4> Users</h4>
         </div>
 </div>
 
 
-
 <div class="main-container">
-    <div class="grid-container-user-index ">
+    <div class=".grid-container-userindex ">
         <%for(let i = 0; i < users.length; i++) {%>
-            <article class="location-listing">
-            <div class="hoverclass" >
-                <a class="user-title-card" href="/users/<%=users[i]._id%>"><%=users[i].username%></a>
-                
-                </div>
+            <article>
+                <a class="username-index" href="/users/<%=users[i]._id%>"><%=users[i].username%></a>
             </article>
-            
         <%}%>
     </div>
 </div>
