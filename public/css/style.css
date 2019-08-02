@@ -156,7 +156,7 @@ h6 {
     max-height: 600px ;
     object-fit: contain;
     align-content: space-between;
-    min-width: 300px;
+      min-width: 300px;
 }
 
 .show-title {
@@ -446,11 +446,14 @@ textarea[type=text] {
 .submitEdit {
     margin-top: 3%;
 }
+<<<<<<< HEAD
 
 #mun {
     font-weight: 100;
 }
 
+=======
+>>>>>>> e219d1655af7d220f58c9827199d3925ad59e9bb
 
 
 
